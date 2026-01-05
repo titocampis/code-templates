@@ -1,0 +1,216 @@
+\documentclass[11pt]{article}
+
+% -----------------------------------------------------------------------------
+% Variables
+% -----------------------------------------------------------------------------
+\title{PAC 3 - Tenim un repte! \\[1.5ex]
+    \large Societat, Família i Educació}
+\author{Alejandro Campos Almazán}
+\date{January, 2026}
+
+\newcommand{\HeaderTitle}{Societat, Família i Educació}
+\newcommand{\ReferencesFile}{references}
+\newcommand{\Language}{english}
+
+\newif\ifstartwithtitle
+\startwithtitletrue % Uncomment to start with just title
+
+\newif\ifshowheader
+\showheadertrue % Uncomment to have header
+
+\newif\ifshowfooter
+% \showfootertrue % Uncomment to have footer
+
+% -----------------------------------------------------------------------------
+% / Variables
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+% Main Config
+% -----------------------------------------------------------------------------
+% --- How text input is interpreted ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% --- Language ---
+\usepackage[\Language]{babel} 
+
+% --- Automatic language quotation ---
+\usepackage{csquotes}
+
+% --- Layout and formatting for title and sections ---
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage[a4paper]{geometry}
+\setlength{\parindent}{0ex}
+\setlength{\parskip}{6pt}
+\geometry{top=2.5cm, bottom=3cm,left=2.5cm, right=2.5cm}
+
+% --- Add one more depth degree with paragraph ---
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% -----------------------------------------------------------------------------
+% / Main Config
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+% Bibliography
+% -----------------------------------------------------------------------------
+% --- APA7 Bibliography ---
+\usepackage[style=apa, backend=biber]{biblatex}
+%\DeclareLanguageMapping{catalan}{catalan-apa}
+\addbibresource{\ReferencesFile}
+
+% --- French layout in Bibliography---
+\setlength{\bibhang}{1.27cm}     % sangría francesa (~0.5 pulgadas)
+\setlength{\bibitemsep}{0.8\baselineskip}  % separación entre entradas
+\setlength{\bibnamesep}{0.8\baselineskip}  % separación adicional entre autores distintos (opcional)
+
+% --- Define nested cites ---
+% Freud \nestedtextcite{2025}{perinat}
+\newcommand{\nestedtextcite}[2]{%
+  (#1, citat a \citeauthor{#2}, \citeyear{#2})%
+}
+
+% \nestedparencite{Freud}{2025}{perinat}
+\newcommand{\nestedparencite}[3]{%
+  (#1, #2, citat a \citeauthor{#3}, \citeyear{#3})%
+}
+
+% -----------------------------------------------------------------------------
+% / Bibliography
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+% Header | Footer
+% -----------------------------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% --- Footer ---
+\ifshowfooter
+  \fancyhf{} % remove previous config
+  \fancyfoot[L]{\textit{\HeaderTitle}} % left footer
+  \fancyfoot[R]{\thepage} % right footer set to number
+
+  % --- Footer instead of header ---
+  \renewcommand{\footrulewidth}{0.4pt}
+  \renewcommand{\headrulewidth}{0pt}
+
+  % --- By default first page has the footer ---
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[L]{\textit{\HeaderTitle}}
+    \fancyfoot[R]{\thepage}
+    \renewcommand{\footrulewidth}{0.4pt}
+  }
+\fi
+
+% --- Header ---
+\ifshowheader
+  \fancyhf{} % remove previous config
+  \fancyhead[L]{\textit{\HeaderTitle}}
+  \fancyhead[R]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \setlength{\headheight}{14pt}
+
+  % --- By default first page has the header ---
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[L]{\textit{\HeaderTitle}}
+    \fancyhead[R]{\thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+  }
+\fi
+
+% -----------------------------------------------------------------------------
+% / Header | Footer
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+% Secondary Config
+% -----------------------------------------------------------------------------
+% --- Mainly unused ---
+% \usepackage{graphicx}
+% \usepackage{amsmath}
+% \PassOptionsToPackage{svgnames}{xcolor}
+% \usepackage{tcolorbox}
+% \usepackage{xcolor}
+% \usepackage{lipsum}
+% \usepackage{verbatim}
+% \tcbuselibrary{skins,breakable}
+% \usetikzlibrary{shadings,shadows}
+% \usepackage{float}
+% \usepackage{listings}
+% \usepackage{amssymb}
+% \usepackage{multirow} % for Tables
+% \usepackage{fancyvrb} % for "\Verb" macro
+% \VerbatimFootnotes % enable use of \Verb in footnotes
+% \usepackage{listings}
+% \lstset{basicstyle=\ttfamily,
+%   showstringspaces=false,
+%   commentstyle=\color{green},
+%   keywordstyle=\color{blue}
+% }
+
+% --- Black Hyperlinks ---
+\usepackage[
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black
+]{hyperref}
+
+% -----------------------------------------------------------------------------
+% / Secondary Config
+% -----------------------------------------------------------------------------
+
+% -----------------------------------------------------------------------------
+% Document
+% -----------------------------------------------------------------------------
+\begin{document}
+
+\maketitle
+
+\ifstartwithtitle
+  \thispagestyle{empty}   % suppress page number 
+  \setcounter{page}{0}  % start content on the next page
+  \newpage
+  \tableofcontents
+  \newpage
+\fi
+
+% -----------------------------------------------------------------------------
+\section{Repte 1}
+\subsection{Tasca 1}
+Com va dir \textcite{charco} me aburro
+
+% -----------------------------------------------------------------------------
+\newpage
+\section{Repte 2}
+\subsection{Tasca 3}
+
+\subsection{Tasca 4}
+
+
+% -----------------------------------------------------------------------------
+\ifstartwithtitle
+  \newpage
+\fi
+\printbibliography
+
+% -----------------------------------------------------------------------------
+\newpage
+\appendix
+
+\section{Anexe Guio Entrevista}
+This is Annex A.
+
+\end{document}
+
+% -----------------------------------------------------------------------------
+% / Document
+% -----------------------------------------------------------------------------

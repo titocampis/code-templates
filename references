@@ -1,0 +1,91 @@
+@book{berger,
+  author    = {Berger, K. S.},
+  title     = {Psicología del desarrollo: Infancia y adolescencia},
+  year      = {2016},
+  publisher = {Editorial médica Panamericana},
+  location  = {Madrid}
+}
+
+@book{perinat,
+  author    = {Perinat, Adolfo},
+  title     = {Desenvolupament social, afectiu i comunicatiu: durant els dos primers anys},
+  year      = {2020},
+  publisher = {Fundació Universitat Oberta de Catalunya (FUOC).},
+}
+
+@book{shaffer,
+  author    = {Shaffer, David R. and Kipp, Katherine},
+  title     = {Psicología del desarrollo: Infancia y adolescencia},
+  year      = {2007},
+  edition   = {7},
+  publisher = {International Thomson}
+}
+
+@article{Mauricio2023,
+  author       = {Mauricio Sánchez, Rigoberto},
+  title        = {Vertientes de la Psicología social: PSP, PSS y PSC},
+  year         = {2023},
+  journaltitle      = {Mente y Ciencia},
+  url          = {https://www.menteyciencia.com/vertientes-de-la-psicologia-social-psp-pss-y-psc/}
+}
+
+@article{Spencer2024,
+  author  = {A. Spencer, David},
+  title   = {Efficiency vs. Meaningful Work: A Critical Survey of Historical and Contemporary Debates},
+  journal = {Contributions to Political Economy},
+  year    = {2024},
+  volume  = {43},
+  number  = {1},
+  publisher = {Oxford Academic},
+  pages   = {21-36},
+  url     = {https://academic.oup.com/cpe/article/43/1/21/7689306}
+}
+
+@misc{amat,
+  author       = {Amat, Victor},
+  title        = {{Estoicismo Pijo, Pensamiento Naif y Psicología Punk - Victor Amar | Lo Que Tú Digas 330 [Podcast]}. \emph{Alex Fidalgo}. {Youtube}},
+  date         = {2023},
+  url          = {https://www.youtube.com/watch?v=WBXiPkdWPqY},
+}
+
+@book{desenv,
+  author    = {Lorena Becerril Balín and Eulàlia Hernández Encuentra and Àlex Letosa Porta},
+  title     = {Desenvolupament, aprenentatge i educació: fonaments per a la pràctica al voltant dels set principis de l’aprenentatge},
+  year      = {2023},
+  publisher = {Universitat Oberta de Catalunya (UOC)},
+  note      = {Capítol 1: Principi 1. L’estudiant és el centre de l’aprenentatge},
+  url       = {https://principis-aprenentatge.aula.uoc.edu/}
+}
+
+@article{han,
+  author       = {Maspons, Víctor},
+  title        = {El misterio Byung-Chul Han},
+  year         = {2025},
+  journal      = {Universidad de Navarra},
+  url          = {https://nuestrotiempo.unav.edu/w/el-misterio-byung-chul-han}
+}
+
+@misc{charco,
+  author       = {del Charco, Buenaventura},
+  title        = {{El Psicólogo Anti-Positivismo: 7 Hábitos para tener una Salud Mental Correcta (Ventura Psicologo) [Podcast]}. \emph{Tengo un Plan}. {Youtube}},
+  date         = {2024-02-05},
+  url          = {https://www.youtube.com/watch?v=oDraIv57Bmk},
+}
+
+@book{dyer,
+  author    = {Wayne W. Dyer},
+  title     = {Tus zonas erróneas},
+  year      = {1976},
+  publisher = {Debolsillo},
+  address   = {Barcelona},
+}
+
+@incollection{gergen,
+  author    = {Kenneth J. Gergen},
+  title     = {La autonarració en la vida social},
+  booktitle = {Realidades y relaciones: Aproximaciones a la construcción social},
+  publisher = {Paidós},
+  address   = {Barcelona},
+  year      = {1996},
+  pages     = {231--258}
+}
