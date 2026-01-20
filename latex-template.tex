@@ -85,6 +85,12 @@
   (#1, #2, citat a \citeauthor{#3}, \citeyear{#3})%
 }
 
+% \nestedparenpagcite{Freud}{2025}{perinat}{p. 33}
+\newcommand{\nestedparencite}[4]{%
+  (#1, #2, citat a \citeauthor{#3}, \citeyear{#3}, #4)%
+}
+
+
 % -----------------------------------------------------------------------------
 % / Bibliography
 % -----------------------------------------------------------------------------
@@ -185,6 +191,13 @@
 % \end{figure}
 
 % --- Tables ---
+% \begin{tabular}{|p{2.7cm}|p{6.5cm}|p{5.7cm}|} 
+% \hline
+% \textbf{Component} & \textbf{Dibuix} & \textbf{Funció} \\[6pt] 
+% \hline
+% \raggedright\arraybackslash Placa Base Smart Cutebot & blabla & blabla \\
+% \hline
+% \end{tabular}
 
 % -----------------------------------------------------------------------------
 % / Examples
